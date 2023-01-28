@@ -1,0 +1,96 @@
+:root {
+    --primary-color: #F4F1DE;
+    --secondary-color: #E07A5F;
+    --third-color: #3D405B;
+    --fourth-color: #81B29A;
+    --fifth-color: #F2CC8F;
+    --shadow:  0.1rem 0.3rem 0.2rem #000000;
+}
+
+*, 
+*::before, 
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, 
+body {
+    height: 100%;
+    background-color: var(--fourth-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 3rem;
+}
+
+#container{
+    padding: 5rem;
+    margin: auto;
+}
+
+#calculator{
+    background-color: var(--third-color);
+    max-width: 800px;
+    margin: auto;
+    margin-top: 3rem;
+    border-radius: 0.7rem;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 0.8rem;
+    text-align: center;
+    align-content: center;
+}
+
+.grid-item{
+    border: inherit;
+    box-shadow: var(--shadow);
+}
+
+.grid-container button{
+    padding: 2rem;
+    font-size: 2rem;
+}
+
+.grid-container button:active{
+    transform: translateY(1%);
+}
+
+#del{
+    background-color: var(--secondary-color);
+}
+
+#output-box{
+    background-color: var(--primary-color);
+    grid-column: 1 / span 5;
+    text-align: right;
+    padding: 2rem;
+    font-size: 2rem;
+    overflow: hidden;
+}
+
+#equals{
+    background-color: var(--primary-color);
+    grid-row: 3 / span 3;
+    grid-column: 5;
+}
+
+.operator{
+    background-color: var(--fifth-color);
+}
+
+#clear{
+    background-color: var(--secondary-color);
+}
